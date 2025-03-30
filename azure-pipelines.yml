@@ -15,13 +15,13 @@ steps:
     packageType: 'sdk'
     version: '8.0.x' 
 
-- script: dotnet restore
+- script: dotnet restore ./MVC_Agile_Process.csproj
   displayName: 'Restore packages'
 
-- script: dotnet build --configuration Release
+- script: dotnet build ./MVC_Agile_Process.csproj --configuration Release
   displayName: 'Build solution'
 
-- script: dotnet test
+- script: dotnet test ./MVC_Agile_Process.csproj
   displayName: 'Run tests'
 
 - task: PublishBuildArtifacts@1
